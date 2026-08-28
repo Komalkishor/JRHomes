@@ -1,13 +1,13 @@
 {
   "photos": [
     {
-      "featured": false,
+      "featured": true,
       "image": "/images/uploads/screenshot-2026-08-06-at-7.32.33 pm.png",
-      "caption": "img 2",
+      "caption": "img 1",
       "suburb": "east"
     },
     {
-      "featured": false,
+      "featured": true,
       "image": "/images/uploads/screenshot-2026-08-06-at-6.55.51 pm.png",
       "caption": "img2",
       "suburb": "west"
