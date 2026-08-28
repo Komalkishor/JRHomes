@@ -697,7 +697,6 @@
 
     // Hero rotator: featured photos only, capped at 6, fall back to first few if none marked featured
     let featured = photos.filter(p => p.featured).slice(0, 6);
-    if (!featured.length) featured = photos.slice(0, 6);
     const slides = featured.length ? featured : Array.from({length: 6}, () => null);
     heroRotator.innerHTML = slides.map((item, i) => renderHeroSlide(item, i, i === 0)).join('');
     initHeroRotator();
