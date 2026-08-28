@@ -5,6 +5,12 @@
       "image": "/images/uploads/screenshot-2026-08-06-at-7.32.33 pm.png",
       "caption": "img 2",
       "suburb": "east"
+    },
+    {
+      "featured": false,
+      "image": "/images/uploads/screenshot-2026-08-06-at-6.55.51 pm.png",
+      "caption": "img2",
+      "suburb": "west"
     }
   ]
 }
