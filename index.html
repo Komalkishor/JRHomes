@@ -809,7 +809,7 @@
     dots.forEach(dot => {
       dot.addEventListener('click', () => {
         const i = Number(dot.dataset.index);
-        tiles[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        galleryGrid.scrollTo({ left: tiles[i].offsetLeft, behavior: 'smooth' });
       });
     });
 
@@ -917,7 +917,8 @@
 
     function goTo(i, smooth){
       index = i;
-      tiles[index].scrollIntoView({ behavior: smooth === false ? 'auto' : 'smooth', inline: 'center', block: 'nearest' });
+      const target = tiles[index].offsetLeft;
+      testimonialTrack.scrollTo({ left: target, behavior: smooth === false ? 'auto' : 'smooth' });
     }
 
     dots.forEach(dot => {
