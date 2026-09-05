@@ -268,8 +268,10 @@
     position:relative;
   }
   .gallery-grid{
+    position:relative;
     display:flex;
     overflow-x:auto;
+    overscroll-behavior-x:contain;
     scroll-snap-type:x mandatory;
     -webkit-overflow-scrolling:touch;
     scrollbar-width:none;
@@ -318,8 +320,10 @@
     position:relative;
   }
   .testimonial-track{
+    position:relative;
     display:flex;
     overflow-x:auto;
+    overscroll-behavior-x:contain;
     scroll-snap-type:x mandatory;
     -webkit-overflow-scrolling:touch;
     scrollbar-width:none;
@@ -747,7 +751,8 @@
         </div>
         <div class="footer-contact-row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>Sydney,<br>NSW </span>
+          <span>Sydney,<br> NSW 
+          </span>
         </div>
       </div>
     </div>
@@ -809,7 +814,7 @@
     dots.forEach(dot => {
       dot.addEventListener('click', () => {
         const i = Number(dot.dataset.index);
-        galleryGrid.scrollTo({ left: tiles[i].offsetLeft, behavior: 'smooth' });
+        galleryGrid.scrollTo({ left: tiles[0].offsetWidth * i, behavior: 'smooth' });
       });
     });
 
@@ -917,8 +922,8 @@
 
     function goTo(i, smooth){
       index = i;
-      const target = tiles[index].offsetLeft;
-      testimonialTrack.scrollTo({ left: target, behavior: smooth === false ? 'auto' : 'smooth' });
+      const tileWidth = tiles[0].offsetWidth;
+      testimonialTrack.scrollTo({ left: tileWidth * index, behavior: smooth === false ? 'auto' : 'smooth' });
     }
 
     dots.forEach(dot => {
