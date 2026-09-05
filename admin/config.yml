@@ -1,10 +1,8 @@
 backend:
   name: git-gateway
   branch: main
-
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
-
 collections:
   - name: "gallery"
     label: "Gallery"
@@ -22,3 +20,16 @@ collections:
               - {label: "Job type / description", name: "caption", widget: "string", required: false, hint: "e.g. Full exterior repaint"}
               - {label: "Suburb", name: "suburb", widget: "string", required: false, hint: "e.g. Cronulla"}
               - {label: "Feature on homepage (top rotating photos)", name: "featured", widget: "boolean", default: false}
+
+  - name: "services"
+    label: "Services Section"
+    files:
+      - file: "content/services.json"
+        label: "Our 5 Services Photos"
+        name: "services"
+        fields:
+          - {label: "Interior Painting Photo", name: "interior", widget: "image", required: false}
+          - {label: "Exterior Painting Photo", name: "exterior", widget: "image", required: false}
+          - {label: "Commercial Painting Photo", name: "commercial", widget: "image", required: false}
+          - {label: "Plastering & Repairs Photo", name: "plastering", widget: "image", required: false}
+          - {label: "Special Finishes Photo", name: "finishes", widget: "image", required: false}
