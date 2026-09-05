@@ -16,8 +16,6 @@ collections:
             widget: "list"
             summary: "{{fields.caption}} — {{fields.suburb}}"
             fields:
-              - {label: "About Section Photo", name: "about", widget: "image", required: false}
-              - {label: "About Section Photo", name: "about", widget: "image", required: false}
               - {label: "Photo", name: "image", widget: "image"}
               - {label: "Job type / description", name: "caption", widget: "string", required: false, hint: "e.g. Full exterior repaint"}
               - {label: "Suburb", name: "suburb", widget: "string", required: false, hint: "e.g. Cronulla"}
@@ -30,6 +28,7 @@ collections:
         label: "Our 5 Services Photos"
         name: "services"
         fields:
+          - {label: "About Section Photo", name: "about", widget: "image", required: false}
           - {label: "Interior Painting Photo", name: "interior", widget: "image", required: false}
           - {label: "Exterior Painting Photo", name: "exterior", widget: "image", required: false}
           - {label: "Commercial Painting Photo", name: "commercial", widget: "image", required: false}
