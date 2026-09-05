@@ -3,41 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JRHomes Pty Ltd | Painting &amp; Specialty Finishes, Sydney</title>
-<meta name="description" content="JRHomes Pty Ltd — residential, commercial, interior and exterior painting across Sydney, plus specialty limewash, whitewash and cloud-effect finishes.">
+<title>JR Homes Pty Ltd | Painting &amp; Decorating, Sydney</title>
+<meta name="description" content="JR Homes Pty Ltd — residential, commercial, interior and exterior painting across Sydney, plus special finishes. Fully licensed &amp; insured, 20+ years experience.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/jr-logo.png">
 <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <style>
   :root{
-    --plaster:#EDE8DE;
-    --plaster-deep:#E2DBCB;
-    --ink:#2B2A26;
-    --ink-soft:#54524A;
-    --cloud:#7E93A6;
-    --cloud-deep:#5C7488;
-    --sand:#C9BFA8;
-    --clay:#B5673E;
-    --clay-deep:#9A5432;
-    --white:#FBFAF6;
+    --gold:#F5A623;
+    --gold-deep:#D9900F;
+    --black:#191919;
+    --charcoal:#242424;
+    --ink:#242220;
+    --ink-soft:#5C5A55;
+    --white:#FFFFFF;
+    --offwhite:#F7F6F3;
+    --line:rgba(25,25,25,.1);
     --radius:10px;
-    --max:1160px;
+    --max:1180px;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
     margin:0;
-    background:var(--plaster);
+    background:var(--white);
     color:var(--ink);
     font-family:'Inter',system-ui,sans-serif;
-    font-size:18px;
+    font-size:17px;
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
   }
   h1,h2,h3,.display{
-    font-family:'Fraunces',serif;
-    font-weight:600;
+    font-family:'Poppins',sans-serif;
+    font-weight:700;
     letter-spacing:-0.01em;
     color:var(--ink);
     margin:0;
@@ -49,410 +49,454 @@
     display:inline-flex;
     align-items:center;
     gap:10px;
-    padding:16px 30px;
-    border-radius:999px;
+    padding:15px 28px;
+    border-radius:8px;
     font-family:'Inter',sans-serif;
-    font-weight:600;
-    font-size:17px;
+    font-weight:700;
+    font-size:16px;
     text-decoration:none;
     border:2px solid transparent;
     cursor:pointer;
-    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease;
   }
   .btn:hover{transform:translateY(-2px);}
-  .btn-primary{background:var(--clay); color:var(--white);}
-  .btn-primary:hover{background:var(--clay-deep); box-shadow:0 10px 24px -8px rgba(181,103,62,.55);}
-  .btn-ghost{background:transparent; border-color:var(--ink); color:var(--ink);}
-  .btn-ghost:hover{background:var(--ink); color:var(--plaster);}
-  .btn:focus-visible, a:focus-visible, button:focus-visible{outline:3px solid var(--cloud-deep); outline-offset:3px;}
+  .btn-gold{background:var(--gold); color:var(--black);}
+  .btn-gold:hover{background:var(--gold-deep); box-shadow:0 10px 24px -8px rgba(245,166,35,.55);}
+  .btn-outline{background:transparent; border-color:rgba(255,255,255,.7); color:var(--white);}
+  .btn-outline:hover{background:var(--white); color:var(--black);}
+  .btn-dark{background:var(--black); color:var(--white);}
+  .btn-dark:hover{background:#000;}
+  .btn:focus-visible, a:focus-visible, button:focus-visible{outline:3px solid var(--gold-deep); outline-offset:3px;}
 
   /* header */
   header{
     position:sticky; top:0; z-index:50;
-    background:rgba(237,232,222,.92);
-    backdrop-filter:blur(8px);
-    border-bottom:1px solid rgba(43,42,38,.1);
+    background:var(--white);
+    border-bottom:1px solid var(--line);
   }
   .nav{
     display:flex; align-items:center; justify-content:space-between;
-    padding:18px 28px;
+    padding:14px 28px;
     max-width:var(--max); margin:0 auto;
+    gap:24px;
   }
   .brand{
-    font-family:'Fraunces',serif; font-weight:700; font-size:22px;
     text-decoration:none; color:var(--ink);
-    display:flex; align-items:center; gap:10px;
+    display:flex; align-items:center; gap:12px;
   }
   .brand-mark{
-    width:34px;height:34px;border-radius:50%;
-    background:conic-gradient(from 200deg, var(--cloud), var(--sand), var(--clay), var(--cloud));
+    width:48px;height:48px;
     flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
   }
-  nav ul{list-style:none; display:flex; gap:34px; margin:0; padding:0;}
-  nav ul a{text-decoration:none; font-weight:600; font-size:15.5px; color:var(--ink-soft);}
-  nav ul a:hover{color:var(--ink);}
-  .nav-cta{display:flex; align-items:center; gap:18px;}
-  .nav-phone{font-weight:700; font-size:15.5px; text-decoration:none; display:none;}
+  .brand-mark img{width:100%; height:100%; object-fit:contain;}
+  .brand-text{line-height:1.15;}
+  .brand-text strong{display:block; font-family:'Poppins',sans-serif; font-weight:800; font-size:15.5px; letter-spacing:.02em; color:var(--ink);}
+  .brand-text span{display:block; font-size:11px; font-weight:700; letter-spacing:.08em; color:var(--gold-deep);}
+  nav ul{list-style:none; display:flex; gap:30px; margin:0; padding:0;}
+  nav ul a{text-decoration:none; font-weight:600; font-size:15px; color:var(--ink);}
+  nav ul a:hover{color:var(--gold-deep);}
+  .nav-cta{display:flex; align-items:center; gap:18px; flex-shrink:0;}
+  .nav-phone{
+    display:flex; align-items:center; gap:8px;
+    background:var(--gold); color:var(--black);
+    padding:11px 20px; border-radius:8px;
+    text-decoration:none; font-weight:700; font-size:15px;
+  }
+  .nav-phone:hover{background:var(--gold-deep);}
+  .nav-phone svg{width:17px;height:17px;}
   .menu-btn{display:none; background:none; border:none; cursor:pointer; padding:6px;}
   .menu-btn svg{width:26px;height:26px;}
 
-  @media (max-width:860px){
+  @media (max-width:900px){
     nav ul{
       position:fixed; top:73px; left:0; right:0;
-      background:var(--plaster);
+      background:var(--white);
       flex-direction:column; gap:0;
-      border-bottom:1px solid rgba(43,42,38,.12);
+      border-bottom:1px solid var(--line);
       max-height:0; overflow:hidden;
       transition:max-height .25s ease;
     }
     nav ul.open{max-height:400px;}
     nav ul li{width:100%;}
-    nav ul a{display:block; padding:16px 28px; border-top:1px solid rgba(43,42,38,.08);}
+    nav ul a{display:block; padding:16px 28px; border-top:1px solid var(--line);}
     .menu-btn{display:block;}
-    .nav-cta .btn-ghost{display:none;}
+    .nav-phone span{display:none;}
   }
 
   /* hero */
   .hero{
     position:relative;
     overflow:hidden;
-    padding:88px 0 100px;
+    min-height:640px;
+    display:flex;
+    align-items:center;
     isolation:isolate;
+    color:var(--white);
   }
-  .hero-clouds{
-    position:absolute; inset:0; z-index:-1;
+  .hero-bg{
+    position:absolute; inset:0; z-index:-2;
+    overflow:hidden;
+  }
+  .hero-video{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+  }
+  .hero-bg::after{
+    content:'';
+    position:absolute; inset:0;
     background:
-      radial-gradient(ellipse 55% 40% at 15% 20%, rgba(126,147,166,.55), transparent 60%),
-      radial-gradient(ellipse 45% 35% at 85% 10%, rgba(201,191,168,.6), transparent 60%),
-      radial-gradient(ellipse 60% 45% at 60% 85%, rgba(126,147,166,.35), transparent 65%),
-      radial-gradient(ellipse 40% 30% at 95% 70%, rgba(181,103,62,.18), transparent 60%);
-    filter:blur(2px);
+      linear-gradient(180deg, rgba(30,26,20,.55), rgba(30,26,20,.78)),
+      radial-gradient(ellipse 70% 60% at 20% 20%, rgba(245,166,35,.24), transparent 60%),
+      linear-gradient(135deg, #3d372c, #211d17 70%);
+    background-size:200% 200%;
+    animation: heroDrift 18s ease-in-out infinite alternate;
   }
-  .hero-texture{
-    position:absolute; inset:0; z-index:-1;
-    opacity:.5;
-    mix-blend-mode:multiply;
+  @keyframes heroDrift{
+    0%{background-position:0% 0%, 0% 0%, 0% 0%;}
+    100%{background-position:100% 30%, 30% 60%, 40% 20%;}
   }
-  .hero-inner{
-    display:block;
-  }
-  .hero-lede-row{
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:56px;
-    align-items:start;
-    margin-top:36px;
-  }
-  .eyebrow{
-    display:inline-flex; align-items:center; gap:8px;
-    font-size:14px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
-    color:var(--cloud-deep);
-    margin-bottom:18px;
-  }
-  .eyebrow::before{content:''; width:26px; height:2px; background:var(--cloud-deep); display:inline-block;}
+  .hero-inner{padding:80px 0 0;}
   .hero h1{
-    font-size:clamp(38px, 5.2vw, 60px);
-    line-height:1.06;
-    margin-bottom:22px;
+    color:var(--white);
+    font-size:clamp(36px, 5.4vw, 58px);
+    line-height:1.1;
+    margin-bottom:20px;
   }
-  .hero h1 em{
-    font-style:italic; color:var(--clay-deep);
-  }
+  .hero h1 .line2{color:var(--gold); display:block;}
   .hero p.lede{
     font-size:19px;
-    color:var(--ink-soft);
-    max-width:46ch;
-    margin-bottom:32px;
+    color:rgba(255,255,255,.88);
+    max-width:44ch;
+    margin-bottom:34px;
+    font-weight:500;
   }
-  .hero-ctas{display:flex; gap:16px; flex-wrap:wrap;}
+  .hero-ctas{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:56px;}
   .hero-trust{
-    display:flex; gap:28px; margin-top:40px; flex-wrap:wrap;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    border-top:1px solid rgba(255,255,255,.18);
+    padding:28px 0 40px;
   }
-  .hero-trust div{font-size:14.5px; color:var(--ink-soft);}
-  .hero-trust strong{
-    display:block; font-family:'Fraunces',serif; font-size:26px; color:var(--ink); font-weight:600;
-  }
-  /* hero photo rotation */
-  .hero-visual{
-    position:relative;
-    width:100%;
-    aspect-ratio:16/8;
-    border-radius:22px;
-    overflow:hidden;
-    box-shadow:0 30px 60px -20px rgba(43,42,38,.35);
-    margin:32px 0 12px;
-  }
-  @media (max-width:700px){
-    .hero-visual{aspect-ratio:4/5;}
-  }
-  .hero-ctas-overlay{
-    position:absolute; left:0; right:0; bottom:0; z-index:3;
-    display:flex; gap:16px; flex-wrap:wrap; justify-content:center;
-    padding:26px 24px 28px;
-    background:linear-gradient(0deg, rgba(43,42,38,.55), transparent);
-  }
-  .hero-ctas-overlay .btn-ghost{
-    background:rgba(251,250,246,.92); border-color:transparent; color:var(--ink);
-  }
-  .hero-ctas-overlay .btn-ghost:hover{background:var(--white);}
-  .hero-rotator{ position:relative; width:100%; height:100%; }
-  .hero-rotator-slide{
-    position:absolute; inset:0;
-    opacity:0;
-    transition:opacity 1.4s ease;
-    background:
-      radial-gradient(ellipse 70% 55% at 30% 25%, rgba(255,255,255,.65), transparent 60%),
-      radial-gradient(ellipse 60% 50% at 75% 70%, rgba(126,147,166,.5), transparent 65%),
-      linear-gradient(160deg, var(--sand), var(--cloud) 70%);
-    display:flex; align-items:center; justify-content:center;
-  }
-  .hero-rotator-slide .ph-icon{
-    display:flex; flex-direction:column; align-items:center; gap:10px;
-    color:rgba(43,42,38,.55);
-  }
-  .hero-rotator-slide .ph-icon svg{width:40px; height:40px; opacity:.7;}
-  .hero-rotator-slide .ph-icon span{font-size:13px; font-weight:700; letter-spacing:.02em; text-align:center; max-width:180px;}
-  .hero-rotator-slide.active{opacity:1;}
-  .hero-rotator-slide:nth-child(2){background:radial-gradient(ellipse 70% 55% at 70% 30%, rgba(255,255,255,.6), transparent 60%), radial-gradient(ellipse 55% 50% at 20% 75%, rgba(181,103,62,.35), transparent 65%), linear-gradient(160deg, var(--cloud), var(--sand) 75%);}
-  .hero-rotator-slide:nth-child(3){background:radial-gradient(ellipse 65% 50% at 25% 70%, rgba(255,255,255,.6), transparent 60%), radial-gradient(ellipse 55% 45% at 80% 20%, rgba(126,147,166,.45), transparent 65%), linear-gradient(160deg, var(--sand), var(--clay) 80%);}
-  .hero-rotator-slide:nth-child(4){background:radial-gradient(ellipse 60% 55% at 75% 75%, rgba(255,255,255,.6), transparent 60%), radial-gradient(ellipse 50% 45% at 20% 25%, rgba(181,103,62,.3), transparent 65%), linear-gradient(160deg, var(--cloud-deep), var(--sand) 80%);}
-  .hero-rotator-slide:nth-child(5){background:radial-gradient(ellipse 70% 55% at 50% 20%, rgba(255,255,255,.65), transparent 60%), radial-gradient(ellipse 55% 45% at 30% 80%, rgba(126,147,166,.4), transparent 65%), linear-gradient(160deg, var(--sand), var(--cloud) 65%);}
-  .hero-rotator-slide:nth-child(6){background:radial-gradient(ellipse 65% 55% at 20% 60%, rgba(255,255,255,.6), transparent 60%), radial-gradient(ellipse 50% 45% at 85% 30%, rgba(181,103,62,.28), transparent 65%), linear-gradient(160deg, var(--clay), var(--cloud) 85%);}
-  @media (max-width:860px){
-    .hero-lede-row{grid-template-columns:1fr; gap:24px;}
+  .hero-trust-item{display:flex; align-items:center; gap:12px;}
+  .hero-trust-item svg{width:30px; height:30px; color:var(--gold); flex-shrink:0;}
+  .hero-trust-item strong{display:block; font-size:14.5px; font-weight:700;}
+  .hero-trust-item span{display:block; font-size:13px; color:rgba(255,255,255,.75);}
+  @media (max-width:760px){
+    .hero-trust{grid-template-columns:1fr 1fr;}
   }
 
   /* section shared */
-  section{padding:88px 0;}
-  .section-head{max-width:640px; margin-bottom:56px;}
-  .section-head h2{font-size:clamp(30px,3.8vw,42px); margin-bottom:16px;}
-  .section-head p{color:var(--ink-soft); font-size:18px;}
+  section{padding:80px 0;}
+  .section-head{max-width:640px; margin:0 auto 48px; text-align:center;}
+  .section-head h2{font-size:clamp(28px,3.6vw,38px); margin-bottom:14px;}
+  .section-head p{color:var(--ink-soft); font-size:17px;}
   .eyebrow-sm{
-    font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
-    color:var(--clay-deep); display:block; margin-bottom:12px;
+    font-size:13px; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--gold-deep); display:block; margin-bottom:10px;
+    text-align:center;
   }
+
+  /* showcase rotator (replaces About) */
+  .showcase{background:var(--offwhite);}
+  .showcase-banner{
+    position:relative;
+    width:100%;
+    aspect-ratio:21/8;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 24px 48px -20px rgba(25,25,25,.3);
+  }
+  @media (max-width:760px){ .showcase-banner{aspect-ratio:4/5;} }
+  .showcase-rotator{position:relative; width:100%; height:100%;}
+  .showcase-rotator-slide{
+    position:absolute; inset:0;
+    opacity:0;
+    transition:opacity .9s ease;
+    display:flex; align-items:center; justify-content:center;
+    background:
+      radial-gradient(ellipse 70% 55% at 30% 25%, rgba(255,255,255,.25), transparent 60%),
+      linear-gradient(160deg, #3d3d3d, #171717 75%);
+  }
+  .showcase-rotator-slide.active{opacity:1;}
+  .showcase-rotator-slide .ph-icon{
+    display:flex; flex-direction:column; align-items:center; gap:10px;
+    color:rgba(255,255,255,.55);
+  }
+  .showcase-rotator-slide .ph-icon svg{width:38px; height:38px; opacity:.7;}
+  .showcase-rotator-slide .ph-icon span{font-size:12.5px; font-weight:700; letter-spacing:.02em;}
 
   /* services */
   .services{background:var(--white);}
   .service-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
   }
   .service-card{
-    background:var(--plaster);
+    background:var(--offwhite);
     border-radius:var(--radius);
-    padding:30px 26px;
-    border:1px solid rgba(43,42,38,.08);
-    transition:transform .18s ease, box-shadow .18s ease;
-  }
-  .service-card:hover{transform:translateY(-4px); box-shadow:0 18px 30px -18px rgba(43,42,38,.3);}
-  .service-card.featured{
-    background:linear-gradient(150deg, var(--cloud), var(--cloud-deep));
-    color:var(--white);
-    grid-column:span 1;
-  }
-  .service-card.featured h3, .service-card.featured p{color:var(--white);}
-  .service-icon{
-    width:44px; height:44px; border-radius:10px;
-    display:flex; align-items:center; justify-content:center;
-    background:rgba(43,42,38,.08);
-    margin-bottom:18px;
-  }
-  .service-card.featured .service-icon{background:rgba(255,255,255,.2);}
-  .service-icon svg{width:24px;height:24px;}
-  .service-card h3{font-size:20px; margin-bottom:10px;}
-  .service-card p{color:var(--ink-soft); font-size:15.5px; margin:0;}
-
-  @media (max-width:860px){ .service-grid{grid-template-columns:1fr 1fr;} }
-  @media (max-width:560px){ .service-grid{grid-template-columns:1fr;} }
-
-  /* about / trust */
-  .about{
-    display:grid;
-    grid-template-columns:.85fr 1.15fr;
-    gap:64px;
-    align-items:center;
-  }
-  .about-visual{
-    aspect-ratio:1/1;
-    border-radius:20px;
-    background:
-      radial-gradient(ellipse 60% 50% at 25% 30%, rgba(255,255,255,.55), transparent 60%),
-      linear-gradient(145deg, var(--clay), var(--sand) 80%);
-    position:relative;
     overflow:hidden;
+    border:1px solid var(--line);
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
   }
-  .about ul{list-style:none; margin:28px 0 0; padding:0; display:grid; gap:18px;}
-  .about li{display:flex; gap:14px; align-items:flex-start; font-size:17px; color:var(--ink-soft);}
-  .about li svg{flex-shrink:0; width:22px; height:22px; margin-top:2px; color:var(--cloud-deep);}
-  @media (max-width:860px){ .about{grid-template-columns:1fr;} }
-
-  /* gallery */
-  .gallery{background:var(--white);}
-
-  /* featured carousel */
-  .carousel{
-    position:relative;
-    border-radius:18px;
-    overflow:hidden;
-    aspect-ratio:16/7;
-    background:var(--plaster);
-    margin-bottom:72px;
-    box-shadow:0 20px 40px -22px rgba(43,42,38,.35);
-  }
-  .carousel-track{
-    display:flex;
-    height:100%;
-    transition:transform .6s cubic-bezier(.65,0,.35,1);
-  }
-  .carousel-slide{
-    flex:0 0 100%;
-    height:100%;
-    position:relative;
-    background:repeating-linear-gradient(135deg, var(--plaster-deep), var(--plaster-deep) 14px, var(--plaster) 14px, var(--plaster) 28px);
-  }
-  .carousel-slide::before{
-    content:'';
-    position:absolute; inset:0;
+  .service-card:hover{transform:translateY(-4px); box-shadow:0 18px 30px -18px rgba(25,25,25,.25); border-color:var(--gold);}
+  .service-photo{
+    width:100%;
+    aspect-ratio:4/3;
+    object-fit:cover;
     background:
-      radial-gradient(ellipse 60% 60% at 20% 20%, rgba(126,147,166,.35), transparent 60%),
-      radial-gradient(ellipse 50% 50% at 85% 75%, rgba(181,103,62,.2), transparent 60%);
+      repeating-linear-gradient(135deg, #E9E7E1, #E9E7E1 12px, #F3F1EC 12px, #F3F1EC 24px);
+    display:block;
   }
-  .carousel-caption{
-    position:absolute; left:0; right:0; bottom:0;
-    padding:22px 28px;
-    background:linear-gradient(0deg, rgba(43,42,38,.78), transparent);
-    color:var(--white);
+  .service-card h3{
+    font-size:16.5px;
+    padding:16px 18px;
+    text-align:center;
   }
-  .carousel-caption strong{display:block; font-size:19px; font-family:'Fraunces',serif; font-weight:600;}
-  .carousel-caption span{font-size:14.5px; opacity:.9;}
-  .carousel-placeholder-label{
-    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-    display:flex; flex-direction:column; align-items:center; gap:10px;
-    color:var(--ink-soft); font-size:14px; font-weight:600; text-align:center;
-  }
-  .carousel-placeholder-label svg{width:32px; height:32px; opacity:.55;}
-  .carousel-arrow{
-    position:absolute; top:50%; transform:translateY(-50%);
-    width:42px; height:42px; border-radius:50%;
-    background:rgba(251,250,246,.9);
-    border:none; cursor:pointer;
-    display:flex; align-items:center; justify-content:center;
-    box-shadow:0 6px 16px rgba(43,42,38,.25);
-    transition:background .15s ease;
-    z-index:2;
-  }
-  .carousel-arrow:hover{background:var(--white);}
-  .carousel-arrow.prev{left:16px;}
-  .carousel-arrow.next{right:16px;}
-  .carousel-arrow svg{width:20px;height:20px;color:var(--ink);}
-  .carousel-dots{
-    position:absolute; bottom:20px; right:24px;
-    display:flex; gap:8px; z-index:2;
-  }
-  .carousel-dots button{
-    width:9px; height:9px; border-radius:50%;
-    background:rgba(251,250,246,.55);
-    border:none; cursor:pointer; padding:0;
-    transition:background .15s ease, transform .15s ease;
-  }
-  .carousel-dots button.active{background:var(--white); transform:scale(1.3);}
-  @media (max-width:700px){
-    .carousel{aspect-ratio:4/5;}
-    .carousel-arrow{width:36px;height:36px;}
-  }
+  @media (max-width:980px){ .service-grid{grid-template-columns:repeat(3,1fr);} }
+  @media (max-width:640px){ .service-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:460px){ .service-grid{grid-template-columns:1fr;} }
 
-  /* full gallery grid */
-  .gallery-subhead{margin-bottom:28px;}
-  .gallery-subhead h3{font-size:24px; margin-bottom:6px;}
-  .gallery-subhead p{color:var(--ink-soft); font-size:16px; margin:0;}
+  /* gallery — horizontal single-image swipe carousel */
+  .gallery{background:var(--offwhite);}
+  .gallery-carousel-wrap{
+    max-width:var(--max);
+    margin:0 auto;
+    position:relative;
+  }
   .gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-    max-height:900px;
-    overflow-y:auto;
-    padding-right:6px;
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    border-radius:16px;
+    box-shadow:0 20px 40px -22px rgba(25,25,25,.3);
   }
+  .gallery-grid::-webkit-scrollbar{display:none;}
   .gallery-tile{
-    border-radius:var(--radius);
+    flex:0 0 100%;
+    scroll-snap-align:center;
+    scroll-snap-stop:always;
     overflow:hidden;
-    border:1px solid rgba(43,42,38,.08);
+    border:1px solid var(--line);
     background:var(--white);
   }
   .gallery-tile-img{
-    aspect-ratio:4/3;
-    background:repeating-linear-gradient(135deg, var(--plaster-deep), var(--plaster-deep) 12px, var(--plaster) 12px, var(--plaster) 24px);
-    border-bottom:1.5px dashed var(--sand);
+    aspect-ratio:21/8;
+    background:repeating-linear-gradient(135deg, #E9E7E1, #E9E7E1 12px, #F3F1EC 12px, #F3F1EC 24px);
     display:flex; flex-direction:column; align-items:center; justify-content:center;
     gap:8px; color:var(--ink-soft); text-align:center; padding:14px;
   }
-  .gallery-tile-img svg{width:26px;height:26px; opacity:.6;}
+  @media (max-width:760px){ .gallery-tile-img{aspect-ratio:4/5;} }
+  .gallery-tile-img svg{width:28px;height:28px; opacity:.55;}
   .gallery-tile-img span{font-size:13px; font-weight:600;}
-  .gallery-tile-caption{padding:14px 16px;}
-  .gallery-tile-caption strong{display:block; font-size:15px; margin-bottom:3px;}
-  .gallery-tile-caption span{font-size:13px; color:var(--ink-soft);}
-  @media (max-width:960px){ .gallery-grid{grid-template-columns:repeat(3,1fr);} }
-  @media (max-width:700px){ .gallery-grid{grid-template-columns:1fr 1fr; max-height:700px;} }
-  @media (max-width:480px){ .gallery-grid{grid-template-columns:1fr; max-height:600px;} }
+  .gallery-swipe-hint{
+    text-align:center; font-size:13px; font-weight:600; color:var(--ink-soft);
+    margin-top:14px;
+  }
+  .gallery-dots{
+    display:flex; justify-content:center; gap:7px; margin-top:14px;
+  }
+  .gallery-dots button{
+    width:8px; height:8px; border-radius:50%;
+    background:rgba(25,25,25,.18);
+    border:none; cursor:pointer; padding:0;
+    transition:background .15s ease, transform .15s ease;
+  }
+  .gallery-dots button.active{background:var(--gold-deep); transform:scale(1.25);}
+  .gallery-more{text-align:center; margin-top:36px;}
 
-  /* service area */
-  .area{
-    background:linear-gradient(160deg, var(--cloud-deep), var(--ink) 120%);
-    color:var(--plaster);
-    border-radius:24px;
-    padding:64px 48px;
+  /* testimonials — swipe carousel, same pattern as gallery */
+  .testimonials{background:var(--white);}
+  .testimonial-carousel-wrap{
+    max-width:1140px;
+    margin:0 auto;
+    position:relative;
   }
-  .area h2{color:var(--white);}
-  .area p{color:rgba(251,250,246,.8);}
-  .area-tags{
-    display:flex; flex-wrap:wrap; gap:12px; margin-top:32px;
+  .testimonial-track{
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    border-radius:16px;
   }
-  .area-tags span{
-    background:rgba(251,250,246,.12);
-    border:1px solid rgba(251,250,246,.25);
-    padding:10px 18px;
-    border-radius:999px;
-    font-size:15px; font-weight:600;
+  .testimonial-track::-webkit-scrollbar{display:none;}
+  .testimonial-tile{
+    flex:0 0 100%;
+    scroll-snap-align:center;
+    scroll-snap-stop:always;
+    padding:4px;
+    display:flex;
+    gap:123px;
   }
-  @media (max-width:600px){ .area{padding:44px 26px;} }
-
-  /* contact */
-  .contact{
-    display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;
+  .testimonial-card{
+    background:var(--offwhite);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:13px 16px;
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+    flex:1;
+    min-width:0;
+    box-shadow:0 6px 16px -10px rgba(25,25,25,.18);
   }
-  .contact-card{
+  .testimonial-head{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+  }
+  .testimonial-stars{display:flex; gap:2px; color:var(--gold); flex-shrink:0;}
+  .testimonial-stars svg{width:12px; height:12px;}
+  .testimonial-card p{color:var(--ink); font-size:13px; line-height:1.42; margin:0; text-align:left;}
+  .testimonial-author{font-weight:700; font-size:11px; color:var(--ink-soft); margin-top:auto;}
+  .testimonial-source{
+    display:inline-flex; align-items:center; gap:4px;
+    font-size:10px; font-weight:700;
+    padding:3px 7px; border-radius:20px;
+    border:1px solid var(--line);
     background:var(--white);
-    border-radius:18px;
-    padding:40px;
-    border:1px solid rgba(43,42,38,.08);
+    color:var(--ink-soft);
+    flex-shrink:0;
   }
-  .contact-row{
-    display:flex; align-items:center; gap:16px;
-    padding:18px 0;
-    border-top:1px solid rgba(43,42,38,.1);
+  .testimonial-source svg{width:10px; height:10px; flex-shrink:0;}
+  .testimonial-source.source-google{border-color:rgba(66,133,244,.25);}
+  .testimonial-source.source-hipages{
+    background:rgba(0,178,169,.1);
+    border-color:rgba(0,178,169,.4);
+    color:#00847C;
   }
-  .contact-row:first-child{border-top:none;}
-  .contact-row svg{width:24px;height:24px; color:var(--clay-deep); flex-shrink:0;}
-  .contact-row a{text-decoration:none; font-weight:700; font-size:18px;}
-  .contact-row span{display:block; font-size:13.5px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.05em; font-weight:600;}
-  @media (max-width:860px){ .contact{grid-template-columns:1fr;} }
+  .testimonial-carousel-wrap .gallery-swipe-hint{margin-top:14px;}
+  .testimonial-dots{
+    display:flex; justify-content:center; gap:7px; margin-top:14px; flex-wrap:wrap;
+  }
+  .testimonial-dots button{
+    width:8px; height:8px; border-radius:50%;
+    background:rgba(25,25,25,.18);
+    border:none; cursor:pointer; padding:0;
+    transition:background .15s ease, transform .15s ease;
+  }
+  .testimonial-dots button.active{background:var(--gold-deep); transform:scale(1.25);}
+  @media (max-width:760px){
+    .testimonial-tile{flex-direction:column;}
+    .testimonial-card{padding:18px 18px;}
+  }
+
+  /* contact form */
+  .contact-form-section{background:var(--offwhite);}
+  .contact-form-wrap{
+    max-width:640px;
+    margin:0 auto;
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:44px 40px;
+    box-shadow:0 24px 48px -28px rgba(25,25,25,.3);
+  }
+  .form-row{margin-bottom:20px;}
+  .form-row-cols{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    margin-bottom:20px;
+  }
+  .form-row label, .form-row-cols label{
+    display:block;
+    font-size:13px;
+    font-weight:700;
+    color:var(--ink-soft);
+    margin-bottom:7px;
+  }
+  .form-row input,
+  .form-row textarea,
+  .form-row-cols input{
+    width:100%;
+    padding:13px 15px;
+    border:1px solid var(--line);
+    border-radius:8px;
+    font-family:'Inter',sans-serif;
+    font-size:15px;
+    color:var(--ink);
+    background:var(--offwhite);
+  }
+  .form-row textarea{min-height:130px; resize:vertical;}
+  .form-row input:focus,
+  .form-row textarea:focus,
+  .form-row-cols input:focus{
+    outline:2px solid var(--gold-deep);
+    outline-offset:1px;
+    border-color:var(--gold-deep);
+    background:var(--white);
+  }
+  .contact-form-wrap .btn{width:100%; justify-content:center; font-size:16.5px;}
+  .form-hidden{position:absolute; left:-9999px; top:-9999px;}
+  .form-status{margin-top:16px; font-size:14.5px; font-weight:600; text-align:center;}
+  .form-status.success{color:#1a7f37;}
+  .form-status.error{color:#c0392b;}
+  @media (max-width:600px){
+    .form-row-cols{grid-template-columns:1fr;}
+    .contact-form-wrap{padding:32px 24px;}
+  }
 
   footer{
-    background:var(--ink);
-    color:rgba(251,250,246,.65);
-    padding:44px 0;
+    background:var(--black);
+    color:rgba(255,255,255,.65);
+    padding:64px 0 0;
     font-size:14.5px;
   }
-  .footer-inner{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
-  footer strong{color:var(--plaster);}
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr 1.1fr;
+    gap:40px;
+    padding-bottom:48px;
+  }
+  .footer-brand{display:flex; align-items:center; gap:12px; margin-bottom:16px;}
+  .footer-brand .brand-mark{width:44px; height:44px;}
+  .footer-brand strong{display:block; font-family:'Poppins',sans-serif; font-weight:800; font-size:15px; color:var(--white);}
+  .footer-brand span{display:block; font-size:10.5px; font-weight:700; letter-spacing:.08em; color:var(--gold);}
+  footer h4{color:var(--white); font-size:14.5px; font-weight:700; margin-bottom:18px; letter-spacing:.03em;}
+  footer ul{list-style:none; margin:0; padding:0; display:grid; gap:12px;}
+  footer ul a{text-decoration:none; color:rgba(255,255,255,.65);}
+  footer ul a:hover{color:var(--gold);}
+  .footer-contact-row{display:flex; align-items:flex-start; gap:10px; margin-bottom:14px;}
+  .footer-contact-row svg{width:17px; height:17px; color:var(--gold); flex-shrink:0; margin-top:2px;}
+  .footer-contact-row a{text-decoration:none; color:rgba(255,255,255,.75);}
+  .footer-contact-row a:hover{color:var(--gold);}
+  .footer-social{display:flex; gap:10px; margin-top:20px;}
+  .footer-social a{
+    width:34px; height:34px; border-radius:50%;
+    background:rgba(255,255,255,.08);
+    display:flex; align-items:center; justify-content:center;
+    text-decoration:none;
+  }
+  .footer-social a:hover{background:var(--gold);}
+  .footer-social a svg{width:16px; height:16px; color:var(--white);}
+  .footer-social a:hover svg{color:var(--black);}
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,.12);
+    padding:22px 0;
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+    font-size:13px;
+  }
+  @media (max-width:900px){
+    .footer-grid{grid-template-columns:1fr 1fr; gap:36px 28px;}
+  }
+  @media (max-width:560px){
+    .footer-grid{grid-template-columns:1fr;}
+  }
 
   .sr-only{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap;}
 
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto;}
     *{transition:none !important;}
+    .hero-bg::after{animation:none;}
   }
 </style>
 </head>
@@ -461,20 +505,19 @@
 <header>
   <div class="nav">
     <a href="#top" class="brand">
-      <span class="brand-mark" aria-hidden="true"></span>
-      JRHomes
+      <span class="brand-mark"><img src="assets/jr-logo.png" alt="JR Homes Pty Ltd logo"></span>
+      <span class="brand-text"><strong>JR Homes Pty Ltd</strong><span>Painting &amp; Decorating</span></span>
     </a>
     <nav>
       <ul id="navList">
+        <li><a href="#top">Home</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#area">Areas we cover</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <div class="nav-cta">
-      <a href="#contact" class="btn btn-ghost">Get a free quote</a>
       <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="navList">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
@@ -485,34 +528,57 @@
 <main id="top">
 
   <section class="hero">
-    <div class="hero-clouds" aria-hidden="true"></div>
+    <div class="hero-bg" aria-hidden="true">
+      <video class="hero-video" autoplay muted loop playsinline poster="assets/hero-poster.jpg">
+        <source src="assets/hero-video.mp4" type="video/mp4">
+      </video>
+    </div>
     <div class="wrap hero-inner">
-      <span class="eyebrow">Sydney, NSW</span>
-      <h1>Painting done properly, and <em>finishes</em> most painters can't do at all.</h1>
-
-      <div class="hero-visual" role="img" aria-label="Rotating photos of recent painting and finishing work — placeholder until real photos are added">
-        <div class="hero-rotator" id="heroRotator">
-          <div class="hero-rotator-slide active"><div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 8"/></svg><span>Img 1</span></div></div>
-          <div class="hero-rotator-slide"><div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 8"/></svg><span>Img 2</span></div></div>
-          <div class="hero-rotator-slide"><div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 8"/></svg><span>Img 3</span></div></div>
-          <div class="hero-rotator-slide"><div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 8"/></svg><span>Img 4</span></div></div>
-          <div class="hero-rotator-slide"><div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 8"/></svg><span>Img 5</span></div></div>
-          <div class="hero-rotator-slide"><div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 8"/></svg><span>Img 6</span></div></div>
+      <h1>Quality Painting.<span class="line2">Lasting Results.</span></h1>
+      <p class="lede">Residential &amp; commercial painting, Sydney wide.</p>
+      <div class="hero-ctas">
+        <a href="tel:+61439292535" class="btn btn-gold">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          0439 292 535
+        </a>
+        <a href="#contact" class="btn btn-outline">Get a Free Quote</a>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+          <div><strong>Fully Insured</strong><span>&amp; Licensed</span></div>
         </div>
-        <div class="hero-ctas-overlay">
-          <a href="#contact" class="btn btn-primary">Get a free quote</a>
-          <a href="#gallery" class="btn btn-ghost">See our work</a>
+        <div class="hero-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.1-3.1a4 4 0 01-5.34 5.34L5.7 21.3a2 2 0 01-2.82-2.82L12.7 8.7A4 4 0 0118.04 3.36l-3.1 3.1z"/></svg>
+          <div><strong>20+ Years</strong><span>Experience</span></div>
+        </div>
+        <div class="hero-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5"/></svg>
+          <div><strong>Quality Work</strong><span>Guaranteed</span></div>
+        </div>
+        <div class="hero-trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          <div><strong>On Time</strong><span>&amp; Reliable</span></div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="hero-lede-row">
-        <div>
-          <p class="lede" style="margin-bottom:0;">JRHomes is a small, hands-on painting business covering all of Sydney — from standard interior and exterior jobs to specialty whitewash, limewash and cloud-effect finishes.</p>
-        </div>
-        <div class="hero-trust" style="margin-top:0;">
-          <div><strong>Central Coast&nbsp;–&nbsp;Cronulla</strong>Full Sydney coverage</div>
-          <div><strong>Specialty finishes</strong>Limewash &amp; cloud effects</div>
-          <div><strong>Direct service</strong>You deal with the owner</div>
+  <section class="showcase">
+    <div class="wrap">
+      <span class="eyebrow-sm">Our Work</span>
+      <div class="section-head">
+        <h2>See JR Homes In Action</h2>
+        <p>A look at recent painting and finishing work across Sydney homes and businesses.</p>
+      </div>
+      <div class="showcase-banner" role="img" aria-label="Rotating photos of recent painting work — placeholder until real photos are added">
+        <div class="showcase-rotator" id="showcaseRotator">
+          <div class="showcase-rotator-slide active"><div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 8"/></svg><span>Photo 1</span></div></div>
+          <div class="showcase-rotator-slide"><div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 8"/></svg><span>Photo 2</span></div></div>
+          <div class="showcase-rotator-slide"><div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 8"/></svg><span>Photo 3</span></div></div>
+          <div class="showcase-rotator-slide"><div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 8"/></svg><span>Photo 4</span></div></div>
+          <div class="showcase-rotator-slide"><div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 8"/></svg><span>Photo 5</span></div></div>
+          <div class="showcase-rotator-slide"><div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 8"/></svg><span>Photo 6</span></div></div>
         </div>
       </div>
     </div>
@@ -520,207 +586,434 @@
 
   <section class="services" id="services">
     <div class="wrap">
+      <span class="eyebrow-sm">Our Services</span>
       <div class="section-head">
-        <span class="eyebrow-sm">What we do</span>
-        <h2>Everyday painting. Extraordinary finishes.</h2>
-        <p>Standard, reliable painting for homes and job sites — plus decorative techniques that give a wall real character.</p>
+        <h2>Professional Painting Services</h2>
+        <p>Reliable, quality painting for homes and businesses across Sydney.</p>
       </div>
       <div class="service-grid">
 
-        <div class="service-card">
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21l4-1 11-11-3-3L4 17l-1 4z"/><path d="M14 6l3 3"/></svg></div>
-          <h3>Interior painting</h3>
-          <p>Walls, ceilings, trim and doors — neat, tidy work with minimal disruption to your home.</p>
+        <div class="service-card" data-service="interior">
+          <img class="service-photo" alt="Interior painting job completed by JR Homes">
+          <h3>Interior Painting</h3>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12l9-9 9 9"/><path d="M5 10v10h14V10"/></svg></div>
-          <h3>Exterior painting</h3>
-          <p>Weatherboard, render, brick and trim, prepared and painted to handle the Sydney climate.</p>
+        <div class="service-card" data-service="exterior">
+          <img class="service-photo" alt="Exterior painting job completed by JR Homes">
+          <h3>Exterior Painting</h3>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></div>
-          <h3>Commercial jobs</h3>
-          <p>Offices, shopfronts and job sites — flexible scheduling that works around your business.</p>
+        <div class="service-card" data-service="commercial">
+          <img class="service-photo" alt="Commercial painting job completed by JR Homes">
+          <h3>Commercial Painting</h3>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-6 9 6-9 6-9-6z"/><path d="M3 9v6l9 6 9-6V9"/></svg></div>
-          <h3>Residential painting</h3>
-          <p>New builds, renovations and repaints for houses, townhouses and apartments.</p>
+        <div class="service-card" data-service="plastering">
+          <img class="service-photo" alt="Plastering and repair job completed by JR Homes">
+          <h3>Plastering &amp; Repairs</h3>
         </div>
 
-        <div class="service-card featured">
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 18a4 4 0 010-8 5 5 0 019.6-1.5A4.5 4.5 0 0118 18H6z"/></svg></div>
-          <h3>Limewashing &amp; whitewashing</h3>
-          <p>Traditional mineral finishes with soft, chalky texture and depth — done properly, by hand.</p>
+        <div class="service-card" data-service="finishes">
+          <img class="service-photo" alt="Special decorative finish completed by JR Homes">
+          <h3>Special Finishes</h3>
         </div>
 
-        <div class="service-card featured">
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17.5 19a4.5 4.5 0 000-9 6 6 0 00-11.5 1.5A4 4 0 007 19h10.5z"/></svg></div>
-          <h3>Cloud-effect finishes</h3>
-          <p>A soft, marbled cloud texture that turns a plain wall into a genuine feature.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="about" id="about">
-    <div class="wrap about" style="display:grid;">
-      <div class="about-visual" role="img" aria-label="Illustration representing careful, hands-on painting craftsmanship"></div>
-      <div>
-        <span class="eyebrow-sm">Why JRHomes</span>
-        <h2>A small business that does the job the boss would want done on their own house.</h2>
-        <p style="color:var(--ink-soft); font-size:18px; margin-top:16px;">JRHomes is run hands-on, with the owner on site and involved in every job — not a call centre passing your job between crews. That means clear communication, careful prep, and finishes that are actually looked after.</p>
-        <ul>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            <div>Straight, honest quotes — no surprise costs once the job's underway.</div>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            <div>Proper surface prep before any paint goes on, so the finish actually lasts.</div>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            <div>Specialty finishes most local painters simply don't offer.</div>
-          </li>
-        </ul>
       </div>
     </div>
   </section>
 
   <section class="gallery" id="gallery">
     <div class="wrap">
+      <span class="eyebrow-sm">Our Gallery</span>
       <div class="section-head">
-        <span class="eyebrow-sm">Recent work</span>
-        <h2>Gallery</h2>
-        <p>Scroll to see more of our recent jobs across Sydney.</p>
+        <h2>Recent Work</h2>
+        <p>A snapshot of jobs we've completed across Sydney.</p>
       </div>
-      <div class="gallery-grid" id="galleryGrid"></div>
-    </div>
-  </section>
-
-  <section id="area">
-    <div class="wrap">
-      <div class="area">
-        <span class="eyebrow-sm" style="color:var(--sand);">Where we work</span>
-        <h2>Covering the whole Sydney region</h2>
-        <p>From the Central Coast down to Cronulla, out to Richmond and across the Eastern Suburbs — if it's in greater Sydney, we can get there.</p>
-        <div class="area-tags">
-          <span>Central Coast</span>
-          <span>Richmond &amp; Hawkesbury</span>
-          <span>Eastern Suburbs</span>
-          <span>Cronulla &amp; Sutherland Shire</span>
-          <span>Sydney CBD &amp; Inner West</span>
-          <span>Greater Western Sydney</span>
-          <span>North Shore</span>
-        </div>
+      <div class="gallery-carousel-wrap">
+        <div class="gallery-grid" id="galleryGrid"></div>
+        <p class="gallery-swipe-hint">Swipe to see more →</p>
+        <div class="gallery-dots" id="galleryDots"></div>
+      </div>
+      <div class="gallery-more">
+        <a href="#contact" class="btn btn-gold">View Full Gallery</a>
       </div>
     </div>
   </section>
 
-  <section id="contact">
+  <section class="testimonials" id="testimonials">
     <div class="wrap">
-      <div class="contact">
-        <div>
-          <span class="eyebrow-sm">Get in touch</span>
-          <h2>Get a free, no-obligation quote</h2>
-          <p style="color:var(--ink-soft); font-size:18px; margin-top:16px;">Tell us about the job — a room, a full exterior, or a specialty finish you've seen and want on your own walls — and we'll get back to you with a straight quote.</p>
-        </div>
-        <div class="contact-card">
-          <div class="contact-row">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-            <div>
-              <span>Phone</span>
-              <a href="tel:+61000000000">Add phone number here</a>
-            </div>
-          </div>
-          <div class="contact-row">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
-            <div>
-              <span>Email</span>
-              <a href="mailto:info@jrhomes.com.au">Add email address here</a>
-            </div>
-          </div>
-          <div class="contact-row">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <div>
-              <span>Service area</span>
-              <span style="font-weight:700; font-size:18px; color:var(--ink); text-transform:none; letter-spacing:normal;">Greater Sydney region</span>
-            </div>
-          </div>
-        </div>
+      <span class="eyebrow-sm">Reviews</span>
+      <div class="section-head">
+        <h2>What Our Customers Say</h2>
+      </div>
+      <div class="testimonial-carousel-wrap">
+        <div class="testimonial-track" id="testimonialTrack"></div>
+        <p class="gallery-swipe-hint">Swipe to see more →</p>
+        <div class="testimonial-dots" id="testimonialDots"></div>
       </div>
     </div>
   </section>
 
 </main>
 
+<section class="contact-form-section" id="contact">
+  <div class="wrap">
+    <span class="eyebrow-sm">Get In Touch</span>
+    <div class="section-head">
+      <h2>Request a Free Quote</h2>
+      <p>Tell us a bit about the job and we'll get back to you.</p>
+    </div>
+    <div class="contact-form-wrap">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="jrContactForm">
+        <input type="hidden" name="form-name" value="contact" />
+        <p class="form-hidden">
+          <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+
+        <div class="form-row-cols">
+          <div class="form-row">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" name="name" required>
+          </div>
+          <div class="form-row">
+            <label for="cf-phone">Phone number</label>
+            <input type="tel" id="cf-phone" name="phone" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="cf-email">Email address</label>
+          <input type="email" id="cf-email" name="email" required>
+        </div>
+
+        <div class="form-row">
+          <label for="cf-job">Description of job</label>
+          <textarea id="cf-job" name="job_description" required placeholder="e.g. Full interior repaint, 3-bedroom house, Bondi"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-gold">Send</button>
+        <p class="form-status" id="cfStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
 <footer>
-  <div class="wrap footer-inner">
-    <div><strong>JRHomes Pty Ltd</strong> — Painting &amp; specialty finishes, Sydney</div>
-    <div>&copy; <span id="year"></span> JRHomes Pty Ltd. All rights reserved.</div>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="brand-mark"><img src="assets/jr-logo.png" alt="JR Homes Pty Ltd logo"></span>
+          <span><strong>JR Homes Pty Ltd</strong><span>Painting &amp; Decorating</span></span>
+        </div>
+        <p style="max-width:30ch; margin:0;">Professional painting and decorating services across Sydney. Quality you can trust.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.5 9.9v-7H7.9V12h2.6V9.8c0-2.6 1.5-4 3.9-4 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 2.9h-2.4v7A10 10 0 0022 12z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="Google"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.35 11.1H12v2.9h5.35c-.5 2.6-2.7 4.1-5.35 4.1-3.25 0-5.9-2.65-5.9-6.1s2.65-6.1 5.9-6.1c1.5 0 2.85.55 3.9 1.5l2.2-2.2C16.6 3.5 14.5 2.6 12 2.6 6.9 2.6 2.8 6.8 2.8 12s4.1 9.4 9.2 9.4c5.3 0 8.8-3.7 8.8-9 0-.6-.05-1-.15-1.3z"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Interior Painting</a></li>
+          <li><a href="#services">Exterior Painting</a></li>
+          <li><a href="#services">Commercial Painting</a></li>
+          <li><a href="#services">Plastering &amp; Repairs</a></li>
+          <li><a href="#services">Special Finishes</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Get a Free Quote</h4>
+        <div class="footer-contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <a href="tel:+61439292535">0439 292 535</a>
+        </div>
+        <div class="footer-contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+          <a href="mailto:jrhomesptyltd@gmail.com">jrhomesptyltd@gmail.com</a>
+        </div>
+        <div class="footer-contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>13 MacKenzie St,<br>Bondi Junction NSW 2022</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; <span id="year"></span> JR Homes Pty Ltd. All Rights Reserved.</div>
+      <div>ABN: 57 675 524 077 &nbsp;&nbsp; License: 302 342 268</div>
+    </div>
   </div>
 </footer>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  /* ---- Gallery + hero photos: load from content/gallery.json (edited via /admin), fall back to placeholders ---- */
+  /* ---- Showcase + gallery photos: load from content/gallery.json (edited via /admin), fall back to placeholders ---- */
   const galleryGrid = document.getElementById('galleryGrid');
-  const heroRotator = document.getElementById('heroRotator');
+  const galleryDots = document.getElementById('galleryDots');
+  const showcaseRotator = document.getElementById('showcaseRotator');
   const PLACEHOLDER_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 8"/></svg>';
 
   function renderGalleryTile(item, i){
     const img = item.image
-      ? `<div class="gallery-tile-img" style="background-image:url('${item.image}'); background-size:cover; background-position:center; border-style:solid;"></div>`
+      ? `<div class="gallery-tile-img" style="background-image:url('${item.image}'); background-size:cover; background-position:center;"></div>`
       : `<div class="gallery-tile-img">${PLACEHOLDER_ICON}<span>Photo ${i + 1}</span></div>`;
-    return `<div class="gallery-tile">${img}<div class="gallery-tile-caption"><strong>${item.caption || 'Job type — e.g. Exterior repaint'}</strong><span>${item.suburb || 'Suburb'}</span></div></div>`;
+    return `<div class="gallery-tile">${img}</div>`;
   }
 
-  function renderHeroSlide(item, i, isActive){
+  function renderShowcaseSlide(item, i, isActive){
     if (item && item.image){
-      return `<div class="hero-rotator-slide${isActive ? ' active' : ''}" style="background-image:url('${item.image}'); background-size:cover; background-position:center;"></div>`;
+      return `<div class="showcase-rotator-slide${isActive ? ' active' : ''}" style="background-image:url('${item.image}'); background-size:cover; background-position:center;"></div>`;
     }
-    return `<div class="hero-rotator-slide${isActive ? ' active' : ''}"><div class="ph-icon">${PLACEHOLDER_ICON}<span>Img ${i + 1}</span></div></div>`;
+    return `<div class="showcase-rotator-slide${isActive ? ' active' : ''}"><div class="ph-icon">${PLACEHOLDER_ICON}<span>Photo ${i + 1}</span></div></div>`;
   }
 
   function renderFromData(photos){
-    // Full gallery: everything, capped at 20
-    const all = photos.slice(0, 20);
+    const all = photos.slice(0, 10);
+    const count = all.length || 10;
     galleryGrid.innerHTML = all.length
       ? all.map(renderGalleryTile).join('')
-      : Array.from({length: 18}, (_, i) => renderGalleryTile({}, i)).join('');
+      : Array.from({length: 10}, (_, i) => renderGalleryTile({}, i)).join('');
 
-    // Hero rotator: featured photos only, capped at 6, fall back to first few if none marked featured
+    galleryDots.innerHTML = Array.from({length: count}, (_, i) =>
+      `<button aria-label="Go to photo ${i + 1}" class="${i === 0 ? 'active' : ''}" data-index="${i}"></button>`
+    ).join('');
+    initGalleryCarousel();
+
     let featured = photos.filter(p => p.featured).slice(0, 6);
     const slides = featured.length ? featured : Array.from({length: 6}, () => null);
-    heroRotator.innerHTML = slides.map((item, i) => renderHeroSlide(item, i, i === 0)).join('');
-    initHeroRotator();
+    showcaseRotator.innerHTML = slides.map((item, i) => renderShowcaseSlide(item, i, i === 0)).join('');
+    initShowcaseRotator();
+  }
+
+  /* ---- Gallery: sync dots to swipe position, click a dot to jump ---- */
+  function initGalleryCarousel(){
+    const tiles = galleryGrid.querySelectorAll('.gallery-tile');
+    const dots = galleryDots.querySelectorAll('button');
+    if (!tiles.length) return;
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const i = Number(dot.dataset.index);
+        tiles[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      });
+    });
+
+    let scrollTimer;
+    galleryGrid.addEventListener('scroll', () => {
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(() => {
+        const tileWidth = tiles[0].offsetWidth;
+        const index = Math.round(galleryGrid.scrollLeft / tileWidth);
+        dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+      }, 80);
+    });
   }
 
   fetch('/content/gallery.json')
     .then(r => r.ok ? r.json() : Promise.reject())
     .then(data => renderFromData(Array.isArray(data.photos) ? data.photos : []))
-    .catch(() => renderFromData([])); // no file yet (e.g. local preview) — show placeholders
+    .catch(() => renderFromData([]));
 
-  /* ---- Hero photo rotation: slow, ambient, no captions ---- */
-  function initHeroRotator(){
-    const slides = document.querySelectorAll('#heroRotator .hero-rotator-slide');
+  /* ---- Showcase rotation: 2 seconds ---- */
+  function initShowcaseRotator(){
+    const slides = document.querySelectorAll('#showcaseRotator .showcase-rotator-slide');
     if (!slides.length) return;
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reduceMotion) return;
     let index = 0;
-    clearInterval(window.__heroTimer);
-    window.__heroTimer = setInterval(() => {
+    clearInterval(window.__showcaseTimer);
+    window.__showcaseTimer = setInterval(() => {
       slides[index].classList.remove('active');
       index = (index + 1) % slides.length;
       slides[index].classList.add('active');
-    }, 5000);
+    }, 2000);
   }
+
+  /* ---- Testimonials: load from content/testimonials.json (editable via /admin), fall back to the real reviews below ---- */
+  const testimonialTrack = document.getElementById('testimonialTrack');
+  const testimonialDots = document.getElementById('testimonialDots');
+  const SOURCE_ICONS = {
+    google: '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>',
+    hipages: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#00B2A9" d="M12 2l9 4.5v9L12 20l-9-4.5v-9L12 2z"/><path fill="#F7941D" d="M12 11l9-4.5V6.5L12 11z"/></svg>'
+  };
+  const STAR = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7-6.2-4-6.2 4 1.6-7L2 9.5l7.1-.6L12 2z"/></svg>';
+  const FALLBACK_TESTIMONIALS = [
+    { author: 'Georgia Bennett', source: 'google', rating: 5, text: 'Ryan is truly amazing. So meticulous, so fast and affordable. His communication is excellent and he was a pleasure to work with. I couldn\u2019t be happier with his service and results. I highly recommend him.' },
+    { author: 'Mags Van Eeden', source: 'google', rating: 5, text: 'Ryan and his team did a fantastic job. Will never work with another painter again if I can help it. AND his quote was lower than all the others. Thanks Ryan.' },
+    { author: 'Andrew Riches', source: 'google', rating: 5, text: 'Ryan was punctual and reliable and worked hard to get the job done within our timeframe, despite some rain delays. He checked in with us on a regular basis to make sure he was meeting our needs. We recommend him for your painting job.' },
+    { author: 'Kylie M.', suburb: 'Balgowlah, NSW', source: 'hipages', rating: 5, text: 'Ryan and his team were fantastic. Meticulous with everything. Moved and protected all furniture. I would 100% recommend Ryan for any painting job. Complete professional.' },
+    { author: 'Ira M.', suburb: 'East Lindfield, NSW', source: 'hipages', rating: 5, text: 'Ryan and the master painter did a great job at a very reasonable quote. They were meticulous and show great care for the work and give attention to details. They were not rushed at all (unlike other tradies). Overall I am very very happy with their work.' },
+    { author: 'Jet C', source: 'google', rating: 5, text: 'Ryan and Jenny promptly responded to our inquiry and understood our needs. They provided a reasonable quote and completed an excellent painting job for our investment property very quickly, with outstanding quality. We highly recommend Ryan, Jenny, and their team!' },
+    { author: 'K K', source: 'google', rating: 5, text: 'Ryan and his guys are the best. The job was done at a moderate price and top-notch quality. Definitely recommending him to my friends.' },
+    { author: 'Junjie Yu', source: 'google', rating: 5, text: 'I have known Ryan for decades and his services always align with my needs. Highly recommend.' },
+    { author: 'Brant Burke-Douglas', source: 'google', rating: 5, text: 'Excellent service, and great price.' }
+  ];
+
+  function renderTestimonialCard(t){
+    const stars = STAR.repeat(Math.max(1, Math.min(5, t.rating || 5)));
+    const sourceLabel = t.source === 'hipages' ? 'hipages' : 'Google';
+    const sourceClass = t.source === 'hipages' ? 'source-hipages' : 'source-google';
+    const sourceIcon = SOURCE_ICONS[t.source] || SOURCE_ICONS.google;
+    return `<div class="testimonial-card">
+      <div class="testimonial-head">
+        <div class="testimonial-stars">${stars}</div>
+        <span class="testimonial-source ${sourceClass}">${sourceIcon}${sourceLabel}</span>
+      </div>
+      <p>"${t.text}"</p>
+      <span class="testimonial-author">${t.author}${t.suburb ? ' &middot; ' + t.suburb : ''}</span>
+    </div>`;
+  }
+
+  function chunkTwo(arr){
+    const pages = [];
+    for (let i = 0; i < arr.length; i += 2) pages.push(arr.slice(i, i + 2));
+    return pages;
+  }
+
+  function renderTestimonials(list){
+    const items = (list && list.length) ? list : FALLBACK_TESTIMONIALS;
+    const pages = chunkTwo(items);
+    const realTilesHtml = pages.map(page =>
+      `<div class="testimonial-tile">${page.map(renderTestimonialCard).join('')}</div>`
+    ).join('');
+    // Append a clone of the first page so both auto-rotate and swipe can keep moving
+    // forward past the last page, then silently reset to the real first page —
+    // instead of visibly scrolling backwards across every review.
+    const cloneHtml = pages.length > 1
+      ? `<div class="testimonial-tile" data-clone="true">${pages[0].map(renderTestimonialCard).join('')}</div>`
+      : '';
+    testimonialTrack.innerHTML = realTilesHtml + cloneHtml;
+    testimonialDots.innerHTML = pages.map((_, i) =>
+      `<button aria-label="Go to reviews page ${i + 1}" class="${i === 0 ? 'active' : ''}" data-index="${i}"></button>`
+    ).join('');
+    initTestimonialCarousel(pages.length);
+  }
+
+  function initTestimonialCarousel(pageCount){
+    const tiles = testimonialTrack.querySelectorAll('.testimonial-tile');
+    const dots = testimonialDots.querySelectorAll('button');
+    if (!tiles.length) return;
+    let index = 0;
+    let resettingLoop = false;
+
+    function updateDots(i){
+      dots.forEach((dot, di) => dot.classList.toggle('active', di === i));
+    }
+
+    function goTo(i, smooth){
+      index = i;
+      tiles[index].scrollIntoView({ behavior: smooth === false ? 'auto' : 'smooth', inline: 'center', block: 'nearest' });
+    }
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => goTo(Number(dot.dataset.index)));
+    });
+
+    let scrollTimer;
+    testimonialTrack.addEventListener('scroll', () => {
+      if (resettingLoop) return;
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(() => {
+        const tileWidth = tiles[0].offsetWidth;
+        let i = Math.round(testimonialTrack.scrollLeft / tileWidth);
+        if (i >= pageCount) {
+          // Landed on the cloned first page (looks identical) — jump back to the
+          // real first page instantly, with no animation, so the loop feels seamless.
+          resettingLoop = true;
+          testimonialTrack.scrollTo({ left: 0, behavior: 'auto' });
+          index = 0;
+          updateDots(0);
+          requestAnimationFrame(() => { resettingLoop = false; });
+          return;
+        }
+        index = i;
+        updateDots(index);
+      }, 80);
+    });
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduceMotion && tiles.length > 1){
+      clearInterval(window.__testimonialTimer);
+      window.__testimonialTimer = setInterval(() => { goTo(index + 1); }, 11000);
+    }
+  }
+
+  fetch('/content/testimonials.json')
+    .then(r => r.ok ? r.json() : Promise.reject())
+    .then(data => renderTestimonials(Array.isArray(data.reviews) ? data.reviews : []))
+    .catch(() => renderTestimonials([]));
+
+  /* ---- Services: load the 5 photos from content/services.json (editable via /admin) ---- */
+  function applyServicePhotos(data){
+    document.querySelectorAll('.service-card[data-service]').forEach(card => {
+      const key = card.dataset.service;
+      const img = card.querySelector('.service-photo');
+      const src = data && data[key];
+      if (src) {
+        img.src = src;
+      } else {
+        img.removeAttribute('src');
+        img.style.background = 'repeating-linear-gradient(135deg,#E9E7E1,#E9E7E1 12px,#F3F1EC 12px,#F3F1EC 24px)';
+      }
+    });
+  }
+
+  fetch('/content/services.json')
+    .then(r => r.ok ? r.json() : Promise.reject())
+    .then(data => applyServicePhotos(data))
+    .catch(() => applyServicePhotos(null));
+
+  const heroVideo = document.querySelector('.hero-video');
+  if (heroVideo) {
+    heroVideo.addEventListener('error', () => { heroVideo.style.display = 'none'; });
+  }
+
+  /* ---- Contact form: submit to Netlify Forms without leaving the page ---- */
+  const jrContactForm = document.getElementById('jrContactForm');
+  if (jrContactForm) {
+    const cfStatus = document.getElementById('cfStatus');
+    function encodeFormData(data){
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+        .join('&');
+    }
+    jrContactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(jrContactForm).entries());
+      cfStatus.textContent = 'Sending...';
+      cfStatus.className = 'form-status';
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encodeFormData(data)
+      })
+        .then(() => {
+          cfStatus.textContent = "Thanks — we've received your message and will be in touch shortly.";
+          cfStatus.className = 'form-status success';
+          jrContactForm.reset();
+        })
+        .catch(() => {
+          cfStatus.textContent = 'Something went wrong sending that — please call or email us directly.';
+          cfStatus.className = 'form-status error';
+        });
+    });
+  }
+
   const menuBtn = document.getElementById('menuBtn');
   const navList = document.getElementById('navList');
   menuBtn.addEventListener('click', () => {
