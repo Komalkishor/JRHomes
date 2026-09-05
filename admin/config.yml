@@ -17,6 +17,7 @@ collections:
             summary: "{{fields.caption}} — {{fields.suburb}}"
             fields:
               - {label: "About Section Photo", name: "about", widget: "image", required: false}
+              - {label: "About Section Photo", name: "about", widget: "image", required: false}
               - {label: "Photo", name: "image", widget: "image"}
               - {label: "Job type / description", name: "caption", widget: "string", required: false, hint: "e.g. Full exterior repaint"}
               - {label: "Suburb", name: "suburb", widget: "string", required: false, hint: "e.g. Cronulla"}
