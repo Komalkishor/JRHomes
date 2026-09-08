@@ -200,35 +200,6 @@
     text-align:center;
   }
 
-  /* showcase rotator (replaces About) */
-  .showcase{background:var(--offwhite);}
-  .showcase-banner{
-    position:relative;
-    width:100%;
-    aspect-ratio:21/8;
-    border-radius:16px;
-    overflow:hidden;
-    box-shadow:0 24px 48px -20px rgba(25,25,25,.3);
-  }
-  @media (max-width:760px){ .showcase-banner{aspect-ratio:4/5;} }
-  .showcase-rotator{position:relative; width:100%; height:100%;}
-  .showcase-rotator-slide{
-    position:absolute; inset:0;
-    opacity:0;
-    transition:opacity .9s ease;
-    display:flex; align-items:center; justify-content:center;
-    background:
-      radial-gradient(ellipse 70% 55% at 30% 25%, rgba(255,255,255,.25), transparent 60%),
-      linear-gradient(160deg, #3d3d3d, #171717 75%);
-  }
-  .showcase-rotator-slide.active{opacity:1;}
-  .showcase-rotator-slide .ph-icon{
-    display:flex; flex-direction:column; align-items:center; gap:10px;
-    color:rgba(255,255,255,.55);
-  }
-  .showcase-rotator-slide .ph-icon svg{width:38px; height:38px; opacity:.7;}
-  .showcase-rotator-slide .ph-icon span{font-size:12.5px; font-weight:700; letter-spacing:.02em;}
-
   /* about */
   .about{background:var(--white);}
   .about-grid{
@@ -632,26 +603,6 @@
     </div>
   </section>
 
-  <section class="showcase">
-    <div class="wrap">
-      <span class="eyebrow-sm">Our Work</span>
-      <div class="section-head">
-        <h2>See JR Homes In Action</h2>
-        <p>A look at recent painting and finishing work across Sydney homes and businesses.</p>
-      </div>
-      <div class="showcase-banner" role="img" aria-label="Rotating photos of recent painting work — placeholder until real photos are added">
-        <div class="showcase-rotator" id="showcaseRotator">
-          <div class="showcase-rotator-slide active"><div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 8"/></svg><span>Photo 1</span></div></div>
-          <div class="showcase-rotator-slide"><div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 8"/></svg><span>Photo 2</span></div></div>
-          <div class="showcase-rotator-slide"><div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 8"/></svg><span>Photo 3</span></div></div>
-          <div class="showcase-rotator-slide"><div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 8"/></svg><span>Photo 4</span></div></div>
-          <div class="showcase-rotator-slide"><div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 8"/></svg><span>Photo 5</span></div></div>
-          <div class="showcase-rotator-slide"><div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 8"/></svg><span>Photo 6</span></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="about" id="about">
     <div class="wrap about-grid">
       <div class="about-text">
@@ -857,7 +808,6 @@
   /* ---- Showcase + gallery photos: load from content/gallery.json (edited via /admin), fall back to placeholders ---- */
   const galleryGrid = document.getElementById('galleryGrid');
   const galleryDots = document.getElementById('galleryDots');
-  const showcaseRotator = document.getElementById('showcaseRotator');
   const PLACEHOLDER_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 8"/></svg>';
 
   function renderGalleryTile(item, i){
@@ -865,13 +815,6 @@
       ? `<div class="gallery-tile-img" style="background-image:url('${item.image}'); background-size:cover; background-position:center;"></div>`
       : `<div class="gallery-tile-img">${PLACEHOLDER_ICON}<span>Photo ${i + 1}</span></div>`;
     return `<div class="gallery-tile">${img}</div>`;
-  }
-
-  function renderShowcaseSlide(item, i, isActive){
-    if (item && item.image){
-      return `<div class="showcase-rotator-slide${isActive ? ' active' : ''}" style="background-image:url('${item.image}'); background-size:cover; background-position:center;"></div>`;
-    }
-    return `<div class="showcase-rotator-slide${isActive ? ' active' : ''}"><div class="ph-icon">${PLACEHOLDER_ICON}<span>Photo ${i + 1}</span></div></div>`;
   }
 
   function renderFromData(photos){
@@ -885,11 +828,6 @@
       `<button aria-label="Go to photo ${i + 1}" class="${i === 0 ? 'active' : ''}" data-index="${i}"></button>`
     ).join('');
     initGalleryCarousel();
-
-    let featured = photos.filter(p => p.featured).slice(0, 6);
-    const slides = featured.length ? featured : Array.from({length: 6}, () => null);
-    showcaseRotator.innerHTML = slides.map((item, i) => renderShowcaseSlide(item, i, i === 0)).join('');
-    initShowcaseRotator();
   }
 
   /* ---- Gallery: sync dots to swipe position, click a dot to jump ---- */
@@ -920,21 +858,6 @@
     .then(r => r.ok ? r.json() : Promise.reject())
     .then(data => renderFromData(Array.isArray(data.photos) ? data.photos : []))
     .catch(() => renderFromData([]));
-
-  /* ---- Showcase rotation: 2 seconds ---- */
-  function initShowcaseRotator(){
-    const slides = document.querySelectorAll('#showcaseRotator .showcase-rotator-slide');
-    if (!slides.length) return;
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduceMotion) return;
-    let index = 0;
-    clearInterval(window.__showcaseTimer);
-    window.__showcaseTimer = setInterval(() => {
-      slides[index].classList.remove('active');
-      index = (index + 1) % slides.length;
-      slides[index].classList.add('active');
-    }, 2000);
-  }
 
   /* ---- Testimonials: load from content/testimonials.json (editable via /admin), fall back to the real reviews below ---- */
   const testimonialTrack = document.getElementById('testimonialTrack');
